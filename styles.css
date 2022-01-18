@@ -1,0 +1,37 @@
+body {
+    background-color: rgb(65, 65, 65);
+}
+
+.keys {
+    display:grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+    justify-content: center;
+    border: 1px, solid
+    
+
+}
+
+.key {
+    display: grid;
+    background-color: rgba(204, 204, 204, 0.1);
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    align-items: center;
+    color:aliceblue
+    
+}
+
+kbd {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 8vh;
+}
+
+.sound {
+    text-transform: uppercase;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Drum Kit</title>
+</head>
+<body>
+    
+    <div class="keys">
+        <div data-key="65" class="key">
+            <kbd>A</kbd>
+            <span class="sound">b-drum</span>
+        </div>
+
+        <div data-key="69" class="key">
+            <kbd>E</kbd>
+            <span class="sound">crash</span>
+        </div>
+        
+        <div data-key="82" class="key">
+            <kbd>R</kbd>
+            <span class="sound">ride</span>
+        </div>
+
+        <div data-key="70" class="key">
+            <kbd>F</kbd>
+            <span class="sound">floor tom</span>
+        </div>
+
+        <div data-key="71" class="key">
+            <kbd>G</kbd>
+            <span class="sound">mid tom</span>
+        </div>
+
+        <div data-key="72" class="key">
+            <kbd>H</kbd>
+            <span class="sound">high tom</span>
+        </div>
+
+        <div data-key="74" class="key">
+            <kbd>J</kbd>
+            <span class="sound">snar</span>
+        </div>
+
+        <div data-key="73" class="key">
+            <kbd>I</kbd>
+            <span class="sound">hi-hat open</span>
+        </div>
+
+        <div data-key="75" class="key">
+            <kbd>K</kbd>
+            <span class="sound">hi-hat close</span>
+        </div>
+    </div>
+
+    <audio data-key="65" src="sounds/80s-Bdrum1.wav"></audio>
+    <audio data-key="69" src="sounds/80s-CRASH1.wav"></audio>
+    <audio data-key="70" src="sounds/80s-TOM3.wav"></audio>
+    <audio data-key="71" src="sounds/80s-TOM2.wav"></audio>
+    <audio data-key="72" src="sounds/80s-TOM1.wav"></audio>
+    <audio data-key="74" src="sounds/80s-SNARE1.wav"></audio>
+    <audio data-key="73" src="sounds/80s-HHOPEN2.wav"></audio>
+    <audio data-key="75" src="sounds/80s-HHCLOSE1.wav"></audio>
+    <audio data-key="82" src="sounds/80s-CRASH2.wav"></audio>
+
+
+    <script>
+        window.addEventListener('keydown', function(e){
+            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
+            if (!audio) return;
+            audio.currentTime = 0;
+            audio.play()
+        })
+    </script>
+</body>
+</html>
