@@ -2,6 +2,13 @@ body {
     background-color: rgb(65, 65, 65);
 }
 
+h1 {
+    margin: 1em auto 0.5em auto;
+    width: max-content;
+    color: aliceblue;
+    font-family: 'Francois One', sans-serif;
+    font-size: 88px;
+}
 .keys {
     display:grid;
     grid-template-columns: repeat(3, auto);
@@ -17,12 +24,20 @@ body {
 .key {
     display: grid;
     background-color: rgba(204, 204, 204, 0.1);
+    border-radius: 32px;
     width: 150px;
     height: 150px;
     text-align: center;
     align-items: center;
-    color:aliceblue
+    color:aliceblue;
+    transition: all .07s;
     
+}
+
+.playing {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 10px #ffc600;
 }
 
 kbd {
